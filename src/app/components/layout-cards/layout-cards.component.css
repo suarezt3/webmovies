@@ -8,8 +8,16 @@
 .card-movie {
   width: 250px;
   height: 340px;
-  background-color: rgb(176, 213, 249);
+  position: relative; /* Necesario para el pseudo-elemento */
+  background: white; /* Color de fondo */
+  border-radius: 8px; /* Bordes redondeados (opcional) */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra (opcional) */
 }
+
+.card-movie:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra (opcional) */
+}
+
 
 .content-img {
   width: 240px;
@@ -23,4 +31,13 @@ img {
   width: 240px;
   height: 280px;
   border-radius: 5px;
+}
+
+
+.play {
+  width: 40px;
+  padding-top: 10px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
