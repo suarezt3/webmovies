@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { NgZorroModule } from '../../ng-zorro/ng-zorro.module';
 import { DataService } from '../../services/data.service';
 import { log } from 'console';
+import { PELICULA } from '../../interfaces/pelicula';
 
 @Component({
   selector: 'app-layout-cards',
@@ -12,7 +13,7 @@ import { log } from 'console';
 })
 export class LayoutCardsComponent implements OnInit {
 
-  public dataMovies!: any[]
+  public dataMovies!: PELICULA[]
   private dataServices = inject(DataService)
 
 

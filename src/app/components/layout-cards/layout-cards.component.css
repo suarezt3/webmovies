@@ -4,50 +4,55 @@
   flex-direction: row;
   margin-bottom: 10px;
 }
-
 .card-movie {
-  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 230px; /* Ajusta el ancho según tus necesidades */
   height: 340px;
-  position: relative; /* Necesario para el pseudo-elemento */
-  background: white; /* Color de fondo */
-  border-radius: 8px; /* Bordes redondeados (opcional) */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra (opcional) */
-  margin-bottom: 10px;
-  margin-right: 20px;
+  border-radius: 3px; /* Opcional: redondear bordes */
 }
 
 .card-movie:hover {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra (opcional) */
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow:  5px 5px 12px #e6e6e6,
+             -5px -5px 12px #ffffff;
 }
 
+.info-card {
+  display: flex;
+  justify-content: space-around; /* Espacia los textos horizontalmente */
+  width: 100%;
+  margin-bottom: -15px;
+}
 
 .content-img {
-  width: 240px;
-  height: 270px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+
 }
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-  height: 280px;
-  border-radius: 5px;
+.img {
+  width: 200px; /* Ajusta el tamaño de la imagen */
+  height: 250px; /* Mantiene la proporción de la imagen */
+  border-radius: 3px;
 }
 
-
-.play {
-  width: 40px;
-  padding-top: 10px;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+.title {
+  text-align: center;
+  margin-bottom: -5px;
 }
 
-.icon-play{
-  width: 50px;
-  height: 50px;
+/* .content-play {
+  margin-top: auto;
+  text-align: center;
+} */
+
+/* .play {
+  display: inline-block;
+} */
+
+.icon-play {
+  width: 40px; /* Ajusta el tamaño del icono de reproducción */
 }

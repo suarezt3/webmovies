@@ -3,8 +3,28 @@
   <section class="layout">
     @for (item of dataMovies; track $index)  {
       <div class="card-movie">
+        <section class="info-card">
+          <div>
+            <p>{{item.calidad}}</p>
+          </div>
+          <div>
+            <p>{{item.genero}}</p>
+          </div>
+          <div>
+            <p>{{item.anio}}</p>
+          </div>
+        </section>
         <div class="content-img">
-          <img class="img" [src]="item.url_img" alt="Caballos lentos">
+          <img class="img" [src]="item.url_img" [alt]="item.titulo">
+        </div>
+        <div>
+          @if (item.status) {
+            <h3 class="title">{{item.titulo}}</h3>
+
+          }@else {
+            <h3 class="title">Proximamente!</h3>
+          }
+
         </div>
 
           <div class="content-play">
