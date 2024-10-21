@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { NgZorroModule } from '../../ng-zorro/ng-zorro.module';
+import { DataService } from '../../services/data.service';
+import { log } from 'console';
 
 @Component({
   selector: 'app-layout-cards',
@@ -10,9 +12,18 @@ import { NgZorroModule } from '../../ng-zorro/ng-zorro.module';
 })
 export class LayoutCardsComponent implements OnInit {
 
+  public dataMovies!: any[]
+  private dataServices = inject(DataService)
+
+
+
   constructor() { }
 
   ngOnInit() {
+    this.dataServices.getMovies().subscribe((resp: any) => {
+      this.dataMovies = resp
+      console.log(this.dataMovies);
+    })
   }
 
 }

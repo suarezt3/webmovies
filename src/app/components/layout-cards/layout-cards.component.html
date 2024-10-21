@@ -1,13 +1,18 @@
-<section class="layout">
-  <div class="card-movie">
-    <div class="content-img">
-      <img class="img" src="https://www.justwatch.com/images/poster/320463441/s718/slow-horses.jpg" alt="Caballos lentos">
-    </div>
 
-      <div class="content-play">
-        <a class="play" href="https://drive.google.com/file/d/1FCkWN2OdjctM653vIgamYxbTiKrKgJ9g/view?usp=drive_link" target="_blank">
-          <img class="icon-play" src="../../../assets/icons/play.gif" alt="Play">
-        </a>
+
+  <section class="layout">
+    @for (item of dataMovies; track $index)  {
+      <div class="card-movie">
+        <div class="content-img">
+          <img class="img" [src]="item.url_img" alt="Caballos lentos">
+        </div>
+
+          <div class="content-play">
+            <a class="play" [href]="item.url_video" target="_blank">
+              <img class="icon-play" src="../../../assets/icons/play.gif" alt="Play">
+            </a>
+          </div>
       </div>
-  </div>
-</section>
+    }
+  </section>
+

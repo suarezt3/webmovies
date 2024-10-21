@@ -1,8 +1,8 @@
 .layout {
   width: 100%;
   display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 10px;
 }
 
 .card-movie {
@@ -12,6 +12,8 @@
   background: white; /* Color de fondo */
   border-radius: 8px; /* Bordes redondeados (opcional) */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra (opcional) */
+  margin-bottom: 10px;
+  margin-right: 20px;
 }
 
 .card-movie:hover {
