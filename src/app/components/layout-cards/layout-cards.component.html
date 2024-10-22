@@ -5,18 +5,17 @@
       <div class="card-movie">
         <section class="info-card">
           <div>
-            <p>{{item.calidad}}</p>
-          </div>
-          <div>
             <p>{{item.genero}}</p>
           </div>
           <div>
             <p>{{item.anio}}</p>
           </div>
         </section>
-        <div class="content-img">
-          <img class="img" [src]="item.url_img" [alt]="item.titulo">
-        </div>
+        <nz-ribbon [nzText]="item.calidad" nzColor="volcano">
+          <div class="content-img">
+            <img class="img" [src]="item.url_img" [alt]="item.titulo">
+          </div>
+        </nz-ribbon>
         <div>
           @if (item.status) {
             <h3 class="title">{{item.titulo}}</h3>
