@@ -27,4 +27,17 @@ getMovies() {
 }
 
 
+/**
+ *
+ * @returns Metodo que devuelve una lista de todas las series
+ */
+getSeries() {
+  let headers = new HttpHeaders({
+    'apikey': environment.supabaseKey,
+    'Authorization': environment.authorization
+  })
+  return this.http.get(`${this.url}/series`, {headers}).pipe()
+}
+
+
 }

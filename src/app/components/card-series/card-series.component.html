@@ -1,0 +1,34 @@
+<section class="layout">
+  @for (item of dataSeries; track $index)  {
+    <div class="card-movie">
+      <section class="info-card">
+        <div>
+          <p>{{item.genero}}</p>
+        </div>
+        <div>
+          <p>{{item.anio}}</p>
+        </div>
+      </section>
+      <nz-ribbon [nzText]="item.calidad" nzColor="volcano">
+        <div class="content-img">
+          <img class="img" [src]="item.url_img" [alt]="item.titulo">
+        </div>
+      </nz-ribbon>
+      <div>
+        @if (item.status) {
+          <h3 class="title">{{item.titulo}}</h3>
+
+        }@else {
+          <h3 class="title">Proximamente!</h3>
+        }
+
+      </div>
+
+        <div class="content-play">
+          <a class="play" [href]="item.url_video" target="_blank">
+            <img class="icon-play" src="../../../assets/icons/play.gif" alt="Play">
+          </a>
+        </div>
+    </div>
+  }
+</section>

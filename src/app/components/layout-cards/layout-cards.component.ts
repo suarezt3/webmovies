@@ -1,7 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { NgZorroModule } from '../../ng-zorro/ng-zorro.module';
 import { DataService } from '../../services/data.service';
-import { log } from 'console';
 import { PELICULA } from '../../interfaces/pelicula';
 
 @Component({
@@ -24,7 +23,8 @@ export class LayoutCardsComponent implements OnInit {
     this.dataServices.getMovies().subscribe((resp: any) => {
       this.dataMovies = resp
       console.log(this.dataMovies);
-    })
+    });
+
   }
 
 }
