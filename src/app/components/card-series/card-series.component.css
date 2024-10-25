@@ -43,18 +43,9 @@
 
 .title {
   text-align: center;
-  margin-bottom: -5px;
+  margin-bottom: 5px;
 }
 
-/* .content-play {
-  margin-top: auto;
-  text-align: center;
-} */
-
-/* .play {
-  display: inline-block;
-} */
-
-.icon-play {
-  width: 40px; /* Ajusta el tamaño del icono de reproducción */
+.content-footer-card {
+  background-color: yellow;
 }

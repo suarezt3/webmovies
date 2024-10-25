@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit, inject } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { NgZorroModule } from '../../ng-zorro/ng-zorro.module';
+import { SERIE } from '../../interfaces/series';
 
 @Component({
   selector: 'app-card-series',
@@ -11,7 +12,8 @@ import { NgZorroModule } from '../../ng-zorro/ng-zorro.module';
 })
 export class CardSeriesComponent implements OnInit {
 
-  public dataSeries!: any[]
+
+  public dataSeries!: SERIE[]
   private dataService = inject(DataService)
 
   constructor() { }

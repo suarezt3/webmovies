@@ -3,6 +3,9 @@
     <div class="card-movie">
       <section class="info-card">
         <div>
+          <span>T - {{item.temporadas}}</span>
+        </div>
+        <div>
           <p>{{item.genero}}</p>
         </div>
         <div>
@@ -15,7 +18,7 @@
         </div>
       </nz-ribbon>
       <div>
-        @if (item.status) {
+        @if (item.disponibilidad) {
           <h3 class="title">{{item.titulo}}</h3>
 
         }@else {
@@ -24,10 +27,8 @@
 
       </div>
 
-        <div class="content-play">
-          <a class="play" [href]="item.url_video" target="_blank">
-            <img class="icon-play" src="../../../assets/icons/play.gif" alt="Play">
-          </a>
+        <div class="content-footer-card">
+          <button nz-button nzType="primary">Ver</button>
         </div>
     </div>
   }
